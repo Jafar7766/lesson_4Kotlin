@@ -17,10 +17,10 @@ class DetailActivity : AppCompatActivity() {
 
          fun initViews() {
             val tv_detail = findViewById<TextView>(tv_detail)
-            var name = intent.getStringExtra("name")
-            Log.d(TAG, name!!)
+            var user = intent.getSerializableExtra("user")
+            Log.d(TAG,user.toString())
 
-            tv_detail.text = name
+            tv_detail.text = user.toString()
 
         }
     }
